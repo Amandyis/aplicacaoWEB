@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <link rel="stylesheet" href="/stylesheet/reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/svg" href="img/heart.svg" />
+    <title>Mandy's Library</title>
+  </head>
+  <body>
+    <div class="titulo_apresentacao"><strong>mandy's library</strong></div>
+
+    <header class="cabecalho">
+      <div class="home">
+        <a href="estante.html" class="link_home">Minha Estante</a>
+        <a href="index.html" class="link_home">home</a>
+        <a href="controleDeLivros.html" class="link_home">Controle</a>
+      </div>
+    </header>
+    <hr />
+
+    <h3 class="titulo-form">Livros Cadastrados</h3>
+    <br />
+
+    <section class="pesquisa">
+      <form class="d-flex" role="search" id="formPesquisa">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Digite o título do livro"
+          aria-label="Search"
+          id="campoPesquisa"
+        />
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          id="botaoPesquisa"
+        >
+          Pesquisar
+        </button>
+      </form>
+    </section>
+
+    <section class="tabela">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="tabela-cabecalho">Título do Livro</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyLivros">
+          <tr class="linhaTabela">
+            <td>
+              <span class="texto-livro">Mark</span>
+              <button
+                id="btnApagar"
+                type="button"
+                class="btn btn-outline-danger"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Apagar
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-success"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+          </tr>
+          <tr>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button id="prev" onclick="changePage(-1)" class="botao-pag">
+          Anterior
+        </button>
+        <span id="page-info"></span>
+        <button id="next" onclick="changePage(1)" class="botao-pag">
+          Próximo
+        </button>
+      </div>
+    </section>
+
+    <div class="bnt_cad">
+      <a class="botao_cadastro" href="cadastroDeLivros.html">Cadastro de Livros</a>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir livro</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Você tem certeza que deseja excluir este livro?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="botaoExcluir"
+            >
+              Excluir
+            </button>
+            <button type="button" class="btn btn-primary">Sair</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/tabelaDeLivros.js"></script>
+    <script src="js/editarLivro.js"></script>
+    <script src="js/apagarLivro.js"></script>
+  </body>
+</html>

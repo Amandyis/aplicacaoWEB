@@ -1,0 +1,48 @@
+.pesquisa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.d-flex{
+    width: 50%;
+}
+.teste-card{
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+        margin-left: 1.5em;
+        gap: 0px;
+    align-content: center;
+    justify-content: center;
+}
+.card .a{
+    width: 50%;
+}
+
+@media screen and (min-width: 759px) {
+
+    .teste-card{
+        grid-template-columns: repeat(2, 300px);
+    }
+    
+}
+
+@media screen and (min-width: 999px) {
+
+    .teste-card{
+        grid-template-columns: repeat(3, 300px);
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    .teste-card{
+        display: grid;
+        grid-template-columns: repeat(4, 300px);
+        align-content: center;
+        justify-content: center;
+        margin-left: 1.5em;
+        gap: 0px;
+    }
+    
+}

@@ -1,0 +1,95 @@
+body{
+    font-family: var(--fonte);
+}
+
+
+.bnt_cad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+.botao_cadastro{
+    text-decoration: none;
+    background: #ffcde8;
+    padding: 0.8em 1.5em;
+    border-radius: 15px;
+    font-family: var(--fonte-corpo);
+    color: black;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.titulo-form{
+    text-align: center;
+}
+
+.form-cadastro{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+
+
+
+/* TABELA */
+
+
+
+.tabela {
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+}
+
+.table {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 600px; /* Largura máxima */
+    margin: auto;
+}
+
+.linhaTabela td {
+    display: flex;                  
+    justify-content: space-between;
+    gap: 0.6em;
+    align-items: center;           
+}
+
+.texto-livro {
+    flex-grow: 1;                  /* Faz o texto ocupar o espaço restante */
+}
+
+thead{
+    background: #ff69b4; /* Rosa */
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.botao-pag{
+    background: var(--cor-botao);
+    font-family: var(--fonte);
+    border-radius: 5px;
+    border: 0;
+    padding: 0.2em 0.5em;
+}
+
+@media (max-width: 576px) {
+    .table {
+        width: 100%;
+    }
+}
