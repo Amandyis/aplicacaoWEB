@@ -1,7 +1,7 @@
 let livroIdParaExcluir = null;
 
 async function conectaAPI() {
-  const conexao = await fetch("http://localhost:3005/livros");
+  const conexao = await fetch("http://localhost:3000/livros");
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }
@@ -19,7 +19,7 @@ async function excluirLivroTabela() {
   if (livroIdParaExcluir === null) return;
 
   try {
-    await fetch(`http://localhost:3005/livros/${livroIdParaExcluir}`, {
+    await fetch(`http://localhost:3000/livros/${livroIdParaExcluir}`, {
       method: "DELETE",
     });
 

@@ -1,11 +1,11 @@
 async function conectaAPI() {
-  const conexao = await fetch("http://localhost:3005/livros");
+  const conexao = await fetch("http://localhost:3000/livros");
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }
 
 async function criaLivro(id, titulo, imagem, genero) {
-  const conexao = await fetch("http://localhost:3005/livros", {
+  const conexao = await fetch("http://localhost:3000/livros", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
