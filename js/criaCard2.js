@@ -1,5 +1,5 @@
 async function conectaAPI() {
-  const conexao = await fetch("http://localhost:3000/livros");
+  const conexao = await fetch("http://198.168.208.51:3000/livros/livros");
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }

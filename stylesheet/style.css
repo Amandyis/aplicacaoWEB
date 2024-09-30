@@ -230,3 +230,9 @@ body{
         font-size: 80px;
     }
 }
+
+@media screen and (min-width: 1300px){
+    .card{
+        width: 100%;
+    }
+}

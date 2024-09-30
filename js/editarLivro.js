@@ -1,7 +1,7 @@
 let idLivro = null;
 
 async function conectaAPI() {
-  const conexao = await fetch("http://localhost:3000/livros");
+  const conexao = await fetch("http://198.168.208.51:3000/livros");
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }
@@ -40,7 +40,7 @@ async function atualizaLivro(evento) {
   const id = document.getElementById("idLivroEditar").value;
   const imagem = document.getElementById("inputCapaEditar").value;
 
-  const response = await fetch(`http://localhost:3000/livros/${id}`, {
+  const response = await fetch(`http://198.168.208.51:3000/livros/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

@@ -1,5 +1,5 @@
 async function conectaAPI() {
-  const conexao = await fetch("http://localhost:3000/livros");
+  const conexao = await fetch("http://198.168.208.51:3000/livros");
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }
@@ -33,7 +33,7 @@ function renderizaTabela() {
               <button
                 id="btnApagar"
                 type="button"
-                class="btn btn-outline-danger"
+                class="btn btn-outline-danger excluir"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 onclick="prepararExclusao(${livro.id})"
@@ -42,7 +42,7 @@ function renderizaTabela() {
               </button>
               <button
                 type="button"
-                class="btn btn-outline-success"
+                class="btn btn-outline-success editar"
                 onclick="prepararEdicao(${livro.id})"
               >
                 Editar
