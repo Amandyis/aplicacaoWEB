@@ -106,7 +106,7 @@
     </section>
 
     <div class="bnt_cad">
-      <a class="botao_cadastro" href="cadastroDeLivros.html">Cadastro de Livros</a>
+      <a class="botao_cadastro" href="cadastroDeLivros.html" id="link_cadastro">Cadastro de Livros</a>
     </div>
 
     <!-- Modal -->
@@ -133,12 +133,11 @@
             <button
               type="button"
               class="btn btn-secondary"
-              data-bs-dismiss="modal"
               id="botaoExcluir"
             >
               Excluir
             </button>
-            <button type="button" class="btn btn-primary">Sair</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sair</button>
           </div>
         </div>
       </div>
@@ -149,7 +148,7 @@
       integrity="sha384-..."
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/tabelaDeLivros.js"></script>
     <script src="js/editarLivro.js"></script>
     <script src="js/apagarLivro.js"></script>
