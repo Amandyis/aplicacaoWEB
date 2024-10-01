@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 110%; */
+    /* margin-right: 5em; */
+
+}
+.inputPesq{
+    width: 100%;
 }
 .d-flex{
     width: 50%;
@@ -18,12 +24,21 @@
     width: 50%;
 }
 
+.capa{
+    height: 100%; /* Defina a altura desejada */
+    object-fit: cover;
+}
+
+.genero{
+    /* background-color: olive; */
+    margin-top: 0.1em;
+}
+
 @media screen and (min-width: 759px) {
 
     .teste-card{
         grid-template-columns: repeat(2, 300px);
     }
-    
 }
 
 @media screen and (min-width: 999px) {

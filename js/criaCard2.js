@@ -1,5 +1,5 @@
 async function conectaAPI() {
-  const conexao = await fetch("http://198.168.208.51:3000/livros/livros");
+  const conexao = await fetch("http://192.168.208.51:3000/livros");
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }
@@ -12,9 +12,9 @@ function criarCard(genero, imagem) {
   card.classList.add("card", "a");
   card.style.width = "13rem";
 
-  card.innerHTML = `<img src="${imagem}" class="card-img-top" alt="...">
+  card.innerHTML = `<img src="${imagem}" class="card-img-top capa" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${genero}</h5>
+    <h5 class="card-title genero">${genero}</h5>
   </div>`;
 
   return card;
