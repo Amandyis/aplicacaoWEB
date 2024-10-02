@@ -41,6 +41,7 @@ function renderizaTabela() {
                 Apagar
               </button>
               <button
+                id = "btnEditar"
                 type="button"
                 class="btn btn-outline-success editar"
                 onclick="prepararEdicao(${livro.id})"
